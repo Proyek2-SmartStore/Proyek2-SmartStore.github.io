@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import myContext from '../../../context/data/myContext';
+import { updatePassword } from 'firebase/auth';
 
 function UpdateProduct() {
+    const context = useContext(myContext)
+    const { products, setproducts, updateProduct } = context;
     return (
         <div>
             <div className=' flex justify-center items-center h-screen'>
@@ -10,6 +14,8 @@ function UpdateProduct() {
                     </div>
                     <div>
                         <input type="text"
+                        value={products.title}
+                        onChange={(e)=> setproducts({...products, title: e.target.value})}
                             name='title'
                             className=' bg-gray-600 mb-4 px-2 py-2 w-full lg:w-[20em] rounded-lg text-white placeholder:text-gray-200 outline-none'
                             placeholder='Product title'
@@ -17,6 +23,8 @@ function UpdateProduct() {
                     </div>
                     <div>
                         <input type="text"
+                        value={products.price}
+                        onChange={(e)=> setproducts({...products, price: e.target.value})}
                             name='price'
                             className=' bg-gray-600 mb-4 px-2 py-2 w-full lg:w-[20em] rounded-lg text-white placeholder:text-gray-200 outline-none'
                             placeholder='Product price'
@@ -24,6 +32,8 @@ function UpdateProduct() {
                     </div>
                     <div>
                         <input type="text"
+                        value={products.imageUrl}
+                        onChange={(e)=> setproducts({...products, imageUrl: e.target.value})}
                             name='imageurl'
                             className=' bg-gray-600 mb-4 px-2 py-2 w-full lg:w-[20em] rounded-lg text-white placeholder:text-gray-200 outline-none'
                             placeholder='Product imageUrl'
@@ -31,6 +41,8 @@ function UpdateProduct() {
                     </div>
                     <div>
                         <input type="text"
+                        value={products.category}
+                        onChange={(e)=> setproducts({...products, category: e.target.value})}
                             name='category'
                             className=' bg-gray-600 mb-4 px-2 py-2 w-full lg:w-[20em] rounded-lg text-white placeholder:text-gray-200 outline-none'
                             placeholder='Product category'
@@ -38,13 +50,16 @@ function UpdateProduct() {
                     </div>
                     <div>
                        <textarea cols="30" rows="10" name='title'
+                       value={products.description}
+                       onChange={(e)=> setproducts({...products, description: e.target.value})}
                             className=' bg-gray-600 mb-4 px-2 py-2 w-full lg:w-[20em] rounded-lg text-white placeholder:text-gray-200 outline-none'
-                            placeholder='Product title'>
+                            placeholder='Product description'>
 
                        </textarea>
                     </div>
                     <div className=' flex justify-center mb-3'>
                         <button
+                        onClick={updateProduct}
                             className=' bg-yellow-500 w-full text-black font-bold  px-2 py-2 rounded-lg'>
                             Update Product
                         </button>
