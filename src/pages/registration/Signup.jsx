@@ -57,7 +57,7 @@ function Signup() {
     }
 
     return (
-        <div className=" flex justify-center items-center h-screen">
+        <div className=" flex justify-center items-center h-screen" id='SignupForm'>
             {loading && <Loader/>}
             <div className=" bg-gray-800 px-10 py-10 rounded-xl ">
                 <div> <FiX size={20} color="white" onClick={cancelLogin} style={{ cursor: 'pointer' }} /> </div>
@@ -68,6 +68,7 @@ function Signup() {
                 </div>
                 <div>
                     <input
+                        id="name"
                         type="text"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
@@ -78,6 +79,7 @@ function Signup() {
                 </div>
                 <div>
                     <input
+                        id="email"
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
@@ -88,6 +90,7 @@ function Signup() {
                 </div>
                 <div>
                     <input
+                        id="password"
                         type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
@@ -97,6 +100,7 @@ function Signup() {
                 </div>
                 <div className=" flex justify-center mb-3">
                     <button
+                        id="btnSignup"
                         onClick={signup}
                         className=" bg-yellow-500 w-full text-black font-bold  px-2 py-2 rounded-lg"
                     >

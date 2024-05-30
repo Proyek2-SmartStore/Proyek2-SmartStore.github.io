@@ -46,7 +46,7 @@ function Login() {
     }
    
     return (
-        <div className=' flex justify-center items-center h-screen'>
+        <div className=' flex justify-center items-center h-screen' id='loginForm'>
             {loading && <Loader/>}
             <div className=' bg-gray-800 px-10 py-10 rounded-xl '>
                 <div> <FiX size={20} color="white" onClick={cancelLogin} style={{ cursor: 'pointer' }} /> </div>
@@ -54,9 +54,11 @@ function Login() {
                     <h1 className='text-center text-white text-xl mb-4 font-bold'>Login</h1>
                 </div>
                 <div>
-                    <input type="email"
-                    value={email}
-                    onChange={(e)=> setEmail(e.target.value)}
+                    <input 
+                        type="email"
+                        id='email'
+                        value={email}
+                        onChange={(e)=> setEmail(e.target.value)}
                         name='email'
                         className=' bg-gray-600 mb-4 px-2 py-2 w-full lg:w-[20em] rounded-lg text-white placeholder:text-gray-200 outline-none'
                         placeholder='Email'
@@ -64,6 +66,7 @@ function Login() {
                 </div>
                 <div>
                     <input
+                        id='password'
                         type="password"
                         value={password}
                         onChange={(e)=> setPassword(e.target.value)}
@@ -73,7 +76,8 @@ function Login() {
                 </div>
                 <div className=' flex justify-center mb-3'>
                     <button
-                    onClick={login}
+                        id='btnLogin'
+                        onClick={login}
                         className=' bg-yellow-500 w-full text-black font-bold  px-2 py-2 rounded-lg'>
                         Login
                     </button>
