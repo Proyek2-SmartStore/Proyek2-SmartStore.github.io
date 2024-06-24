@@ -22,6 +22,7 @@ function Signup() {
     const signup = async () => {
         setLoading(true)
         if (name === "" || email === "" || password === "") {
+            setLoading(false);
             return toast.error("All fields are required");
         }
 
@@ -43,10 +44,12 @@ function Signup() {
             setName("");
             setEmail("");
             setPassword("");
-            setLoading(false)
+            navigate('/login');
         } catch (error) {
             console.log(error);
-            setLoading(false)
+            toast.error("Pendaftaran Gagal");
+        } finally {
+            setLoading(false);
         }
     };
 
