@@ -1,0 +1,24 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "build" }
+      }
+    ],
+    "rewrites": [
+      { "source": "/", "destination": "/" },
+      { "source": "/allproducts", "destination": "/" },
+      { "source": "/order", "destination": "/" },
+      { "source": "/cart", "destination": "/" },
+      { "source": "/dashboard", "destination": "/" },
+      { "source": "/login", "destination": "/" },
+      { "source": "/signup", "destination": "/" },
+      { "source": "/productinfo/:id", "destination": "/" },
+      { "source": "/addproduct", "destination": "/" },
+      { "source": "/updateproduct", "destination": "/" },
+      { "source": "/:path*", "destination": "/" }
+    ]
+  }
+  
