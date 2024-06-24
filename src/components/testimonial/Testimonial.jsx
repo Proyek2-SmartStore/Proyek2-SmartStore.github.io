@@ -13,7 +13,7 @@ function Testimonial() {
                     <div className="flex flex-wrap -m-4">
                         <div className="lg:w-1/3 lg:mb-0 mb-6 p-4">
                             <div className="h-full text-center">
-                                <img alt="testimonial" className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="./public/profile_pict.jpg" />
+                                <img alt="testimonial" className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="/profile_pict.jpg" />
                                 <p style={{color: mode === 'dark' ? 'white' : ''}} className="leading-relaxed">Barang original dan pengiriman cepat, ditambah dengan gratis ongkir. Saya sangat puas dengan pelayanannya.</p>
                                 <span className="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4" />
                                 <h2 style={{color: mode === 'dark' ? '#CA8A04' : ''}} className="text-gray-900 font-medium title-font tracking-wider text-sm uppercase">Fitrah Ali Akbar Setiawan</h2>
@@ -22,7 +22,7 @@ function Testimonial() {
                         </div>
                         <div className="lg:w-1/3 lg:mb-0 mb-6 p-4">
                             <div className="h-full text-center">
-                                <img alt="testimonial" className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="./public/mamah_pict.jpg" />
+                                <img alt="testimonial" className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="/mamah_pict.jpg" />
                                 <p  style={{color: mode === 'dark' ? 'white' : ''}}className="leading-relaxed">Barang original dan pengiriman cepat, ditambah dengan gratis ongkir. Saya sangat puas dengan pelayanannya.</p>
                                 <span className="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4" />
                                 <h2 style={{color: mode === 'dark' ? '#CA8A04' : ''}} className="text-gray-900 font-medium title-font tracking-wider text-sm uppercase">Lilis Ratnaningsih</h2>
@@ -31,7 +31,7 @@ function Testimonial() {
                         </div>
                         <div className="lg:w-1/3 lg:mb-0 p-4">
                             <div className="h-full text-center">
-                                <img alt="testimonial" className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="./public/ayah_pict.jpg" />
+                                <img alt="testimonial" className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="/ayah_pict.jpg" />
                                 <p style={{color: mode === 'dark' ? 'white' : ''}} className="leading-relaxed">Barang original dan pengiriman cepat, ditambah dengan gratis ongkir. Saya sangat puas dengan pelayanannya.</p>
                                 <span className="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4" />
                                 <h2 style={{color: mode === 'dark' ? '#CA8A04' : ''}} className="text-gray-900 font-medium title-font tracking-wider text-sm uppercase">Iwan Setiawan</h2>
