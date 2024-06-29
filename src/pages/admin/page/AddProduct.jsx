@@ -68,6 +68,7 @@ function AddProduct() {
                     </div>
                     <div className=' flex justify-center mb-3'>
                         <button
+                        id='addbutton'
                         onClick={addProduct}
                             className=' bg-yellow-500 w-full text-black font-bold  px-2 py-2 rounded-lg'>
                             Add Product
