@@ -58,7 +58,7 @@ function UpdateProduct() {
                         />
                     </div>
                     <div>
-                       <textarea cols="30" rows="10" name='title'
+                       <textarea cols="30" rows="10" name='description'
                        value={products.description}
                        onChange={(e)=> setproducts({...products, description: e.target.value})}
                             className=' bg-gray-600 mb-4 px-2 py-2 w-full lg:w-[20em] rounded-lg text-white placeholder:text-gray-200 outline-none'
